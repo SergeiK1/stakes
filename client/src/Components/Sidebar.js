@@ -4,13 +4,15 @@ import '../Styles/Sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      {/* Top Buttons */}
       <div className="top-buttons">
-        <button class="button1">Click Me</button>
+        <button class="navbutton button1=">Roulette</button>
+        <button class="navbutton button2">Coin Flip</button>
+        <button class="navbutton button3">Slots</button>
+        <button class="navbutton button4">Dice</button>
       </div>
-      {/* Bottom Buttons */}
       <div className="bottom-buttons">
-        {/* Settings and Profile buttons */}
+        <button class="navbutton profile">Profile</button>
+        <button class="navbutton settings">Settings</button>
       </div>
     </div>
   );

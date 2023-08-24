@@ -3,7 +3,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 200px;
+    width: 15%;
     background-color: #24262d;
     color: #fff;
     display: flex;
@@ -11,45 +11,39 @@
     justify-content: space-between;
   }
 
-  .button1 {
-    align-items: center;
-    background: #f5f5fa;
-    border: 0;
-    border-radius: 8px;
-    box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
-    box-sizing: border-box;
-    color: #2a1f62;
-    cursor: pointer;
+.top-buttons {
     display: flex;
-    font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
-    font-size: 1rem;
     justify-content: center;
-    line-height: 1.5rem;
-    padding: 15px;
-    position: relative;
-    text-align: left;
-    transition: .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: pre;
-    width: max-content;
-    word-break: normal;
-    word-spacing: normal;
-  }
-  
-  .button1:hover {
-    background: #f8f8ff;
-    box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
-  }
-  
-  @media (min-width: 768px) {
-    .button-67 {
-      padding: 24px;
-    }
-  }
-          
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100%;
+}
 
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.navbutton {
+    padding: 6% 22% 6%;
+    margin-bottom: 7%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: #2d3038;
+    color: white;
+    
+}
+.navbutton:hover {
+    background-color: #87f2e4;
+    color: #24262d;
+    transform: scale(1.18); /* Enlarge the button slightly on hover */
+    box-shadow: 0px 8px 12px rgba(166, 186, 178, 0.1); /* Add a subtle shadow on hover */
+}
 
 
 
