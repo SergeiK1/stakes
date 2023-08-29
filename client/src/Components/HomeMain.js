@@ -4,8 +4,7 @@ import '../Styles/HomeMain.css';
 const MainContent = () => {
   return (
     <div className="main-content">
-      {/* Content */}
-      {/* This should be scrollable */}
+      <img className="fillerimg" src='images/casinoimage.png' alt="background"></img>
     </div>
   );
 }

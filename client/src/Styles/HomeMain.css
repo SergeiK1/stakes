@@ -1,0 +1,12 @@
+
+.main-content {
+    max-width: 100%; /* Set the maximum width of the container */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    margin-top: 7%;
+    margin-left: 17%;
+    margin-right: 2%;
+}
+
+.fillerimg {
+    width: 100%;
+}

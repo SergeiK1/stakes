@@ -1,0 +1,91 @@
+/* Login.css */
+
+/* Shared styles for all screen sizes */
+.login-container {
+    margin: 0 auto;
+    margin-top: 15%;
+    padding: 2%;
+    /* border: 1px solid #000000; */
+    border-radius: 5px;
+    box-shadow: 0px 10px 100px rgba(40, 184, 251, 0.924);
+    background-color: rgb(34, 34, 37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 5%;
+    color: #ffffff;
+  }
+  
+  input {
+    width: 100%;
+    padding: 3%;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #26dcf8;
+    color: #000000;
+    padding: 2% 5%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  p {
+    color: #dfdfdf;
+    font-size: 1em;
+    margin-top: 13%;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red; /* Set the text color to red */
+    font-size: 14px; /* Set the font size */
+    margin-top: 8px; /* Add some space above the error message */
+    /* You can add more CSS properties here as needed */
+  }  
+
+
+
+  
+  /* Styles for screens smaller than 600px (e.g., mobile devices) */
+  @media (max-width: 600px) {
+    .login-container {
+      max-width: 100%; /* Full width on small screens */
+      padding: 4%;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    input {
+      padding: 3%;
+    }
+  
+    button {
+      padding: 3% 6%;
+    }
+  }
+  
+  /* Styles for screens between 601px and 1024px (e.g., tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .login-container {
+      max-width: 80%; /* 80% width on medium screens */
+      padding: 4%;
+    }
+  }
+  
+  /* Styles for screens larger than 1024px (e.g., desktops) */
+  @media (min-width: 1025px) {
+    .login-container {
+      max-width: 400px; /* Fixed width on large screens */
+    }
+  }
+  
