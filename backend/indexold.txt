@@ -1,0 +1,46 @@
+import express from "express";
+import mysql from "mysql2";
+import cors from "cors"
+
+const app = express()
+
+// Use the cors middleware to allow requests from all origins (for development)
+// In production, you should specify the allowed origins explicitly.
+app.use(cors())
+
+const db = mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"#Functionalcontext@375",
+    database:"StakesTest"
+})
+
+app.get("/", (req,res)=>{
+    res.json("[ Backend Connected ]")
+})
+
+app.get("/users", (req,res)=>{
+    const q = "SELECT * FROM users"
+    db.query(q, (err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
+app.post("/users", (req, res) => {
+    const q = "INSERT INTO users (`username`, `email`, `password`, `balance`) VALUES (?)";
+    const values = [
+        req.body.username,
+        req.body.email,
+        req.body.password,
+        req.body.balance
+    ];
+    db.query(q, [values], (err, data) => {
+        if (err) return res.json(err);
+        return res.json("[ New User Created ]")
+    })
+})
+
+app.listen(8800, ()=>{
+    console.log("Connected to Backend!")
+})
