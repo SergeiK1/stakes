@@ -29,7 +29,7 @@ export default function Login() {
           // Handle successful login
           console.log('Logged in successfully');
           setLoggedIn(true); // Set login status to true
-          navigate("/");
+          navigate("/home");
         }
       } else {
         const registerData = {
@@ -44,7 +44,7 @@ export default function Login() {
           // Handle successful registration
           console.log('Registered successfully');
           setLoggedIn(true); // Set login status to true
-          navigate("/");
+          navigate("/home");
         }
       }
     } catch (error) {

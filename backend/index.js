@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 app.use(
   session({
-    secret: "your-secret-key", // Change this to a strong, random secret key
+    secret: "7b8c4e2f3a9d10e6b9f4a0d2d5e8f925a3b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0", // Change this to a strong, random secret key
     resave: false,
     saveUninitialized: true,
   })
@@ -36,6 +36,24 @@ app.get("/users", (req, res) => {
     return res.json(data);
   });
 });
+// ... existing imports and setup
+
+app.get("/getBalance", (req, res) => {
+  if (!req.session || !req.session.user) {
+    return res.status(401).json({ message: "User not logged in" });
+  }
+
+  const userId = req.session.user.id;
+
+  const q = "SELECT balance FROM users WHERE id = ?";
+  db.query(q, [userId], (err, data) => {
+    if (err) return res.status(500).json({ message: "Internal server error" });
+    return res.json({ balance: data[0].balance });
+  });
+});
+
+// ... rest of the code
+
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
